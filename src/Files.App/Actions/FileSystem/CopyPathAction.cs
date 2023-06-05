@@ -36,7 +36,7 @@ namespace Files.App.Actions
 					path = path.Replace("\\", "/", StringComparison.Ordinal);
 
 				DataPackage data = new();
-				data.SetText(path);
+				data.SetText("\"" + path + "\"");
 
 				Clipboard.SetContent(data);
 				Clipboard.Flush();
